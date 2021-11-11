@@ -18,6 +18,7 @@ public class Main {
         System.out.println("                Variable j = " + j + "\n" + line);
         int i2 = i;
         int i3 = i;
+        String finalNumber = null;
 
         int k = 1;
         int numberOfCycles = 0;
@@ -52,6 +53,7 @@ public class Main {
             if (numberOfCycles > maxCycles)
             {
                 maxCycles = numberOfCycles;
+                finalNumber = String.valueOf(i2);
             }
             numberOfCycles = 0;
             i2++;
@@ -61,6 +63,7 @@ public class Main {
 
         System.out.println("Variable i :: " + i3);
         System.out.println("Variable j :: " + j + "\n");
-        System.out.println("Maximum Cycle Length :: " + maxCycles + "\n" + line);
+        System.out.println("Maximum Cycle Length :: " + maxCycles);
+        System.out.println("Number with Maximum Cycles :: " + finalNumber + "\n" + line);
     }
 }
